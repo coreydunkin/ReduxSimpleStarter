@@ -1,6 +1,7 @@
 module.exports = {
   entry: [
-    './src/index.js'
+    './src/index.js',
+    'react-hot-loader/patch'
   ],
   output: {
     path: __dirname,
