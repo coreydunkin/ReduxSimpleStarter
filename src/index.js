@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader'
-
+import { AppContainer } from 'react-hot-loader';
+import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
-
 const API_KEY = 'AIzaSyC_iIT9BWq-ENy8w6DUqY6z_CqmskF0t7Y';
+
+YTSearch({key: API_KEY, term: 'surfboards'}, function(data) {
+	console.log(data);
+});
 
 // Create new component. This Component should produce some HTML
 
@@ -12,7 +15,6 @@ const App = () => {
 
 	return (
 		<div>
-		<h1>HELLO!!!?</h1>
 			<SearchBar />
 		</div>
 	);
