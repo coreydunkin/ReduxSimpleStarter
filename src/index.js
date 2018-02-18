@@ -1,27 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
+import VideoList from './components/video_list';
 const API_KEY = 'AIzaSyC_iIT9BWq-ENy8w6DUqY6z_CqmskF0t7Y';
 
-YTSearch({key: API_KEY, term: 'surfboards'}, function(data) {
-	console.log(data);
-});
 
-// Create new component. This Component should produce some HTML
 
-const App = () => {
+class App extends Component {
 
-	return (
-		<div>
-			<SearchBar />
-		</div>
-	);
+	constructor(props) {
+		super(props);
 
+		this.state = { videos: [] };
+
+		YTSearch({key: API_KEY, term: 'bill burr'}, (videos) => {
+			this.setState({ videos });
+			// this.setState({ videos: videos });
+		});
+	}
+ 
+	render() {
+		return (
+			<div>
+				<SearchBar />
+				<VideoList videos={this.state.videos} />
+			</div>
+		);	
+	}
 }
 
-// Take this componnent's generated HTML and put it on the page (in the DOM)
 
 ReactDOM.render(<AppContainer><App /></AppContainer>, document.querySelector('.container'));
 
