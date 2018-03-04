@@ -1,7 +1,7 @@
 {
-  "name": "redux-simple-starter",
+  "name": "youtube react build",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Rebuilt youtube based on Redux, React and Babel",
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
@@ -10,7 +10,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Corey Dunkin",
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
