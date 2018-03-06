@@ -1,9 +1,9 @@
 {
-  "name": "youtube react build",
+  "name": "youtube-react-build",
   "version": "1.0.0",
   "description": "Rebuilt youtube based on Redux, React and Babel",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": "https://github.com/coreydunkin/youtube-react",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js ",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
