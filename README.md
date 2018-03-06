@@ -4,9 +4,7 @@ Built a youtube clone based on React. Learning purposes. Cloned from Stephen Gri
 
 ### Getting Started
 
->Clone repo
->Locate repo in terminal or cmd
->Inside terminal/cmd type:
+Clone repo, Locate repo in terminal or cmd, and inside terminal/cmd type:
 
 ```
 > npm install
